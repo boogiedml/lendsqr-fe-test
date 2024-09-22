@@ -1,0 +1,32 @@
+@import "../../../variables";
+
+.organisation-switch {
+  position: relative;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  .organisation-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .organisation-icon {
+    position: relative;
+
+    .icon {
+      width: 16px;
+    }
+  }
+
+  .organisation-title {
+    font-weight: 400;
+    font-size: 13px;
+    color: $primary-text-color;
+    transition: color 0.3s ease;
+  }
+}

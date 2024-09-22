@@ -1,0 +1,19 @@
+@import "../../../variables";
+
+.root-layout {
+  width: 100%;
+  background-color: $admin-theme-color;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+
+  > .scrollable-section {
+    flex: 1;
+    margin-left: 280px;
+    margin-top: 80px;
+    padding: 2.5rem;
+  }
+}

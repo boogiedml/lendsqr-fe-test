@@ -1,0 +1,61 @@
+@import "../../../variables";
+
+.action-button {
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.9rem;
+
+  &.full {
+    width: 100%;
+  }
+
+  &[class*="width-"] {
+    width: auto;
+  }
+
+  &.big {
+    padding: 12px 28px;
+  }
+
+  &.small {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  &.outline,
+  &.outline-grey {
+    background-color: transparent;
+  }
+
+  &.outline {
+    border: 1px solid $theme-color;
+    color: $theme-color;
+  }
+
+  &.outline-grey {
+    border: 1px solid $outline_color;
+    color: $outline_color;
+  }
+
+  &.solid {
+    background-color: $theme-color;
+    color: white;
+  }
+
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .loading-text {
+    margin-left: 8px;
+  }
+}

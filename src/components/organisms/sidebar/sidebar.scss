@@ -1,0 +1,112 @@
+@import "../../../variables";
+
+.sidebar {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 120px 0 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > .all-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.sidebar-links-container {
+  > h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    color: $secondary-text-color;
+    padding: 0 30px;
+    margin-bottom: 8px;
+  }
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sidebar-link {
+  position: relative;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: $theme-color;
+    visibility: hidden;
+  }
+
+  // Active link
+  &.active {
+    background-color: rgba(57, 205, 204, 0.1);
+
+    &.sidebar-link::after {
+      visibility: visible;
+    }
+
+    .sidebar-link-title {
+      color: $primary-text-color;
+      font-weight: 400;
+    }
+
+    .sidebar-link-icon {
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .sidebar-link-icon {
+    position: relative;
+
+    .icon {
+      width: 16px;
+      opacity: 0.5;
+    }
+  }
+
+  .sidebar-link-title {
+    font-weight: 350;
+    font-size: 13px;
+    color: $secondary-text-color;
+    transition: color 0.3s ease;
+  }
+}
+
+.sidebar-footer {
+  border-top: 1px solid #545f7d26;
+
+  > div {
+    padding: 0 30px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}

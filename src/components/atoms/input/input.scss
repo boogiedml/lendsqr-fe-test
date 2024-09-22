@@ -1,0 +1,86 @@
+@import "../../../variables";
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-size: 14px;
+  color: $label-color;
+  margin-bottom: 4px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1.5px solid #545f7d26;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &.sm {
+    font-size: 13px;
+    padding: 0.7rem 0.9rem;
+  }
+
+  &.search {
+    padding-right: 3.5rem;
+  }
+
+  &::placeholder {
+    color: $label-color;
+  }
+
+  &.password-input {
+    padding-right: 40px;
+  }
+}
+
+.search-icon-container {
+  background-color: $theme-color;
+  color: white;
+  width: 3rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 6px 6px 0;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 300;
+  color: $theme-color;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.input-error {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #d95959;
+}
+
+.input-note {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #5c5c5c;
+}
