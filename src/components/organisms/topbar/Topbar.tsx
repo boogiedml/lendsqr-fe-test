@@ -9,7 +9,7 @@ const Topbar = () => {
     <div className="topbar">
       <div>
         <div className="logo-container">
-          <img src="/images/lendsqr-logo.svg" alt="" />
+          <img src="/images/lendsqr-logo.svg" alt="lendsqr" />
         </div>
         <div className="search-input-container">
           <Input

@@ -8,15 +8,15 @@ const Login = () => {
     <div className="login_section">
       <div className="image_section">
         <div className="logo-container">
-          <img src="/images/lendsqr-logo.svg" alt="" />
+          <img src="/images/lendsqr-logo.svg" alt="lendsqr" />
         </div>
         <div className="image_container -translate-y-[50%]">
-          <img src="/public/images/auth-img.svg" alt="" />
+          <img src="/images/auth-img.svg" alt="auth-img" />
         </div>
       </div>
       <div className="form">
         <div className="logo-container">
-          <img src="/images/lendsqr-logo.svg" alt="" />
+          <img src="/images/lendsqr-logo.svg" alt="lendsqr" />
         </div>
         <div>
           <header>
