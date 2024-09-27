@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: transparent;
+  margin-bottom: 2rem;
+
+  > span {
+    font-size: 15px;
+    font-family: "Work Sans", sans-serif;
+    color: $secondary-text-color;
+  }
+}

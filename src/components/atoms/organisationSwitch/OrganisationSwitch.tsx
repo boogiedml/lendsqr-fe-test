@@ -10,7 +10,7 @@ const OrganisationSwitch = () => {
         </span>
         <span className="organisation-title">Switch Organization</span>
       </div>
-      <IoIosArrowDown color="#213F7D" size={16} />
+      <IoIosArrowDown color="#213F7D" size={18} />
     </div>
   );
 };

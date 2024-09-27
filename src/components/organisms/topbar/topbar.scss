@@ -3,7 +3,7 @@
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 24px 30px;
   background-color: white;
   transition: box-shadow 0.3s ease;
@@ -23,13 +23,15 @@
     &:nth-of-type(2) {
       gap: 2.8rem;
 
-      .docs {
+      .docs-link {
         font-size: 1rem;
         text-decoration: underline;
         color: $primary-text-color;
+        font-family: "Work Sans", sans-serif;
       }
 
       .notification_btn {
+        font-size: 25px;
         background: transparent;
         color: $primary-text-color;
         cursor: pointer;
@@ -55,7 +57,8 @@
         }
 
         span {
-          font-size: 16px;
+          font-size: 1rem;
+          font-family: "Work Sans", sans-serif;
         }
       }
     }
@@ -74,5 +77,52 @@
 
   .search-input-container {
     width: 400px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 24px 20px;
+
+    .search-input-container {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-container {
+      width: 120px;
+    }
+
+    > div {
+      &:nth-of-type(2) {
+        .docs-link {
+          display: none;
+        }
+
+        .notification_btn {
+          display: none;
+        }
+
+        div {
+          gap: 0.5rem;
+
+          .image-container {
+            width: 40px;
+            height: 40px;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 10px 0.9rem;
+
+    .logo-container {
+      width: 100px;
+    }
   }
 }

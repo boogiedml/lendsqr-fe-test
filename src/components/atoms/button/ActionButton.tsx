@@ -1,12 +1,13 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import "./actionButton.scss"
+import "./actionButton.scss";
 
 interface ActionButtonProps {
   buttonText: ReactNode;
   outline?: boolean;
   outlineGrey?: boolean;
+  outlineRed?: boolean;
   link?: string;
   width?: string;
   attributes?: ButtonHTMLAttributes<HTMLButtonElement>;
@@ -20,6 +21,7 @@ const ActionButton = ({
   link,
   outline,
   outlineGrey,
+  outlineRed,
   width,
   attributes,
   loading = false,
@@ -27,7 +29,13 @@ const ActionButton = ({
   small = false,
 }: ActionButtonProps) => {
   const buttonClasses = `action-button ${big ? "big" : small ? "small" : ""} ${
-    outline ? "outline" : outlineGrey ? "outline-grey" : "solid"
+    outline
+      ? "outline"
+      : outlineGrey
+      ? "outline-grey"
+      : outlineRed
+      ? "outline-red"
+      : "solid"
   } ${width ? `width-${width}` : "full"}`;
 
   return (

@@ -15,6 +15,11 @@
   overflow-y: auto;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
 
+  @media (max-width: 1500px) {
+    padding: 60px 0 20px;
+    width: 80px;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -35,6 +40,13 @@
     color: $secondary-text-color;
     padding: 0 30px;
     margin-bottom: 8px;
+    font-family: "Work Sans", sans-serif;
+  }
+
+  @media (max-width: 1500px) {
+    > h2 {
+      visibility: hidden;
+    }
   }
 }
 
@@ -74,7 +86,7 @@
 
     .sidebar-link-title {
       color: $primary-text-color;
-      font-weight: 400;
+      font-weight: 450;
     }
 
     .sidebar-link-icon {
@@ -94,10 +106,26 @@
   }
 
   .sidebar-link-title {
-    font-weight: 350;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 15px;
     color: $secondary-text-color;
     transition: color 0.3s ease;
+    font-family: "Work Sans", sans-serif;
+  }
+
+  @media (max-width: 1500px) {
+    height: 45px;
+    overflow: hidden;
+
+    .sidebar-link-icon {
+      .icon {
+        width: 19px;
+      }
+    }
+
+    .sidebar-link-title {
+      visibility: hidden;
+    }
   }
 }
 
@@ -108,5 +136,6 @@
     padding: 0 30px;
     margin-top: 20px;
     font-size: 12px;
+    font-family: "Work Sans", sans-serif;
   }
 }

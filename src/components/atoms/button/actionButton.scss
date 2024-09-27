@@ -42,6 +42,12 @@
     color: $outline_color;
   }
 
+  &.outline-red {
+    border: 1px solid #e4033b;
+    color: #e4033b;
+    background: transparent;
+  }
+
   &.solid {
     background-color: $theme-color;
     color: white;
@@ -54,6 +60,7 @@
     width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-family: "Work Sans", sans-serif;
   }
 
   .loading-text {

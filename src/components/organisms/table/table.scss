@@ -1,0 +1,80 @@
+@import "../../../variables";
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: white;
+  padding: 2.2rem;
+  border: 1.5px solid #213f7d0f;
+  border-radius: 5px;
+  box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
+  color: $secondary-text-color;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .custom-table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+    text-align: left;
+    position: relative;
+
+    tr {
+      position: relative;
+    }
+
+    th {
+      position: relative;
+      font-weight: 500;
+      line-height: 0;
+      text-transform: uppercase;
+      font-size: 13px;
+      padding: 0 0 1.2rem;
+      cursor: pointer;
+      font-family: "Work Sans", sans-serif;
+
+      .icon {
+        margin-left: 10px;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #ddd;
+      padding: 1.2rem 0;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: "Work Sans", sans-serif;
+
+      > .action-btn {
+        background: transparent;
+        color: $secondary-text-color;
+        position: relative;
+      }
+    }
+  }
+  > .filter {
+    position: absolute;
+    left: 1rem;
+    top: 5rem;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    padding: 1.2rem 0.9rem;
+    box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
+    border: 1.5px solid #213f7d0f;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > .btn-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+}

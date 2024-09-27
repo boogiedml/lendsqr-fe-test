@@ -22,11 +22,11 @@ const Topbar = () => {
         </div>
       </div>
       <div>
-        <Link className="docs" to="/">
+        <Link className="docs-link" to="/">
           Docs
         </Link>
         <button className="notification_btn">
-          <SlBell size={25} />
+          <SlBell />
         </button>
         <div>
           <div className="image-container">

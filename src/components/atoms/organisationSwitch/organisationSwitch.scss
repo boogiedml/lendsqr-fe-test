@@ -1,6 +1,7 @@
 @import "../../../variables";
 
 .organisation-switch {
+  // width: 100%;
   position: relative;
   padding: 10px 30px;
   display: flex;
@@ -25,8 +26,17 @@
 
   .organisation-title {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     color: $primary-text-color;
     transition: color 0.3s ease;
+    font-family: "Work Sans", sans-serif;
+  }
+  @media screen and (max-width: 1500px) {
+    padding: 10px 8px;
+    justify-content: center;
+
+    .organisation-details {
+      display: none;
+    }
   }
 }

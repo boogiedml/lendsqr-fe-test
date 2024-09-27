@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import "./rootLayout.scss";
-import ScrollToTop from "../../../utils/ScrollToTop";
 import Sidebar from "../../organisms/sidebar/Sidebar";
 import Topbar from "../../organisms/topbar/Topbar";
+import ScrollToTop from "../../../utils/ScrollToTop";
 
 const RootLayout = () => {
   return (
