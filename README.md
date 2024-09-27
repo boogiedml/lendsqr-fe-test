@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# User Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **User Dashboard** built with **React**, **TypeScript**, and **SCSS**. The dashboard provides a comprehensive interface to manage user data, view user details, and filter users based on various criteria. It is styled using **SCSS** for a modern and responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User List Table**: Displays users with details like name, email, status, registration date, and activity.
+- **User Filters**: Provides options to filter users by organization, email, phone number, or status.
+- **User Details Page**: Displays extensive user details such as personal information, education, employment, social media links, and guarantor details.
+- **Mock Data**: Utilizes mock data for users, including randomly generated profile pictures, loan amounts, savings, and account information.
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Frontend:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript, providing static typing.
+- **SCSS**: A CSS preprocessor that allows the use of variables, nesting, and more to style the components efficiently.
 
-- Configure the top-level `parserOptions` property like this:
+### Data:
+- The mock data was generated using JSON with fields including:
+  - Full name
+  - User tier (represented by stars)
+  - Account balance and details
+  - Personal and employment information
+  - Social media links
+  - Guarantor information
+  - Randomized profile pictures from [randomuser.me](https://randomuser.me)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Application Structure
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Login Page**: Basic login form allowing users to authenticate.
+2. **Dashboard**: The main user interface displaying:
+   - **User statistics**: Total users, active users, users with loans, etc.
+   - **User List**: A table that displays the user's essential details.
+   - **Filters**: Allows users to filter based on organization, email, phone number, or user status.
+3. **User Details Page**: 
+   - Displays detailed information about a specific user.
+   - Includes personal, educational, employment, and social media details.
+   - Displays information about the user's guarantor(s).
+   - Tabs for **Documents**, **Bank Details**, **Loans**, **Savings**, and **App/System Information**.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Getting Started
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Prerequisites:
+- Node.js and npm installed.
+
+### Installation:
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
